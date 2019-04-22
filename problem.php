@@ -136,7 +136,7 @@
     </div>
     <div class="row col s12 m6 l3">
         <div class="container">
-            <a id="btnVoltar" class="btn waves-effect waves-light col l12 m6 s3 red" href="javascript:history.back()" name="voltar">Voltar</a>
+            <a id="btnVoltar" class="btn waves-effect waves-light col l12 m6 s3 red" href="javascript:history.back()" name="voltar" style="border-radius:20px;">Voltar</a>
         </div>
     </div>
     </div>
