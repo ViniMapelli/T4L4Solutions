@@ -35,7 +35,7 @@
                         <label class="black-text" style="font-size:20px; padding-right:20px;">Visualizar passoa a passo? </label>
                             <label class="black-text">
                                 Não
-                                <input class="light" value="0" name="passoapasso" type="checkbox">
+                                <input class="light" value="0" name="passoapasso" type="checkbox" disabled>
                                 <span class="lever"></span>
                                 Sim
                             </label>
