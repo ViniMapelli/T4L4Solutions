@@ -81,7 +81,7 @@ class Decisao
         echo '<div class="col l1">';
                echo '<label style="font-size:16px; position:relative; top:25px; left:10px; color:black;">X'.$count.'</label>';
         echo '</div>';
-        echo '<div class="input-field col l3">';
+        echo '<div class="input-field col l1">';
             echo '<input id="in'.$this->getTipodecisao().$count.'" type="number" class="validate black-text" name="'.$this->getTipodecisao().$restricaoCount.'[]'.'" value="0" step="0.01">';
         echo '</div>';
     }
