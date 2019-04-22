@@ -14,12 +14,12 @@
     $restricao = array();
     for ($i = 1; $i <= $nRestricoes; $i++) array_push($restricao, $_POST['RestricaoVariavel'.$i]);
 
-    $opcaoRestricao = 1;
+    $opcaoRestricao = $_POST['opcaoRestricao'];
 
     $simplex = new Simplex($nDecisoes, $nRestricoes, $funcao, $restricao, $opcaoRestricao, $base, $interacoes);
 
     if ($tipo_funcao == 1) $simplex->maximizar();
-    // elseif ($tipo_funcao == 2) $simplex-> minimizar();
+    elseif ($tipo_funcao == 2) $simplex-> minimizar();
 
 ?>
 
