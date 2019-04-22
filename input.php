@@ -13,7 +13,7 @@
 
 <?php include ('header.php'); ?>
 <main>
-    <form action="" method="post">
+    <form action="problem.php" method="post">
         <div id="page2" class="col l12 m6 s3" >
             <div id="principal" class="container z-depth-5" style="border-radius:40px;">
                 <div class="row col l12 m6 s3">
@@ -23,7 +23,7 @@
                     <div class="input-field col l8 m6 s3" style="right:90px">
                         <select name="funcao" id="funcao">
                             <option value="1" selected>Maximizar</option>
-                            <option value="2">Minimizar</option>
+                            <!-- <option value="2">Minimizar</option> -->
                         </select>
                     </div>
                 </div>
@@ -35,14 +35,14 @@
                         <label class="black-text" style="font-size:20px; padding-right:20px;">Visualizar passoa a passo? </label>
                             <label class="black-text">
                                 Não
-                                <input class="light-green" value="1" name="passoapasso" type="checkbox">
+                                <input class="light" value="0" name="passoapasso" type="checkbox">
                                 <span class="lever"></span>
                                 Sim
                             </label>
                         </div>
                     </div>
                     <div id="listaDecisoes" class="row col l12 m6 s3">
-                        <label class="col l12 m6 s3 black-text">Função:</label>
+                        <label class="col l12 m6 s3 black-text" style="font-size:20px;">Função:</label>
                         <div id="qtdeDecisoes" class="row col l12 m6 s3">
                                 <?php 
                                     $restricao->setTipodecisao('DecisaoVariavel');
@@ -51,8 +51,9 @@
                         </div>
                     </div>
                     <hr/>
+                    <br>
                     <div class="">
-                        <label class="col l12 m6 s3 black-text">Restrições:</label>
+                        <label class="col l12 m6 s3 black-text" style="font-size:20px;">Restrições:</label>
                             <?php $restricao->getRestricao(); ?>
                     </div>
                     <div class="row hide">
@@ -87,4 +88,3 @@
         </div>
     </form>
 </main>
-<!-- <?php include ('footer.php'); ?> -->
