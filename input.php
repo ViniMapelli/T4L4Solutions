@@ -75,7 +75,7 @@
                             $x = $x.' >= 0';
                         ?>
                     <div class="row l12 m6 s3">
-                        <p class="black-text center" style="padding-left:80%"><?= $x; ?></p>
+                        <p class="black-text center" style="padding-left:30%"><?= $x; ?></p>
                     </div>
                     <br/>
                     <div class="row col l12 m6 s3">
