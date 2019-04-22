@@ -20,7 +20,7 @@
                     <div class="col l3">
                         <label style="font-size:16px; position:relative; top:25px; left:10px; color:black;">Qual o objetivo da função ?</label>
                     </div>
-                    <div class="input-field col l8 m6 s3" style="right:90px">
+                    <div class="input-field col l8 m6 s3" style="right:10px">
                         <select name="funcao" id="funcao">
                             <option value="1" selected>Maximizar</option>
                             <!-- <option value="2">Minimizar</option> -->

@@ -96,6 +96,8 @@
                     echo '<p>'.$value[0].' = '.$value[1];
                 ?>
             </div>
+            <!-- ############################ -->
+            <!--
             <div class="col l4 m2 s1">
                 <h6 class="border">Não Básicas</h6>
                 <?php $simplex->restoSolucao(); ?>
@@ -132,7 +134,8 @@
                     ?>
                 </tbody>
             </table>
-        </div>
+        </div>-->
+        <!-- ############### -->
     </div>
     <div class="row col s12 m6 l3">
         <div class="container">
