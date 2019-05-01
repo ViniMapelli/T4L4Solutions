@@ -8,7 +8,8 @@
     $tipo_funcao = intval($_POST['funcao']);
     $interacoes = intval($_POST['nInteracoes']);
 
-    if (isset($_POST['passoapasso'])) $passoapasso = boolval($_POST['passoapasso']);
+    $passoapasso = $_POST['passoapasso'];
+    if ($passoapasso == "true") $passoapasso = true;
     else $passoapasso = false;
 
     $restricao = array();
@@ -97,7 +98,7 @@
                 ?>
             </div>
             <!-- ############################ -->
-            <!--
+            
             <div class="col l4 m2 s1">
                 <h6 class="border">Não Básicas</h6>
                 <?php $simplex->restoSolucao(); ?>
@@ -134,7 +135,7 @@
                     ?>
                 </tbody>
             </table>
-        </div>-->
+        </div>
         <!-- ############### -->
     </div>
     <div class="row col s12 m6 l3">

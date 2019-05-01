@@ -23,7 +23,7 @@
                     <div class="input-field col l8 m6 s3" style="right:10px">
                         <select name="funcao" id="funcao">
                             <option value="1" selected>Maximizar</option>
-                            <!-- <option value="2">Minimizar</option> -->
+                            <option value="2">Minimizar</option>
                         </select>
                     </div>
                 </div>
@@ -35,11 +35,12 @@
                         <label class="black-text" style="font-size:20px; padding-right:20px;">Visualizar passoa a passo? </label>
                             <label class="black-text">
                                 Não
-                                <input class="light" value="0" name="passoapasso" type="checkbox" disabled>
+                                <input class="light" type="checkbox" id="passoinput" name="passo" onclick="checkar()">
                                 <span class="lever"></span>
                                 Sim
                             </label>
                         </div>
+                        <input type="hidden" name="passoapasso" id="campoaux" value="false">
                     </div>
                     <div id="listaDecisoes" class="row col l12 m6 s3">
                         <label class="col l12 m6 s3 black-text" style="font-size:20px;">Função:</label>
@@ -87,4 +88,12 @@
             </div>
         </div>
     </form>
+    <script>
+        function checkar(){
+            if(document.getElementById("passoinput").checked==true)
+                document.getElementById("campoaux").setAttribute("value","true");
+            else
+                document.getElementById("campoaux").setAttribute("value","false");
+        }
+    </script>
 </main>

@@ -15,19 +15,19 @@
                             <label style="font-size:16px; position:relative; top:25px; left:10px; color:black;">Quantidade de variáveis de decisão?</label>
                         </div>
                         <div class="input-field col l8">
-                            <input id="decisao" type="number" class="validate black-text" name="decisoes" value="" style="position:relative; right:20px">
+                            <input id="decisao" type="number" class="validate black-text" name="decisoes" style="position:relative; right:20px" min="1">
                         </div>
                         <div class="col l4">
                             <label style="font-size:16px; position:relative; top:25px; left:10px; color:black;">Quantidade de restrições?</label>
                         </div>
                         <div class="input-field col l8">
-                            <input id="restricao" type="number" class="validate black-text" name="restricoes" value="" min="0" style="position:relative; right:20px">
+                            <input id="restricao" type="number" class="validate black-text" name="restricoes" style="position:relative; right:20px" min="1">
                         </div>
                         <div class="col l4">
                             <label style="font-size:16px; position:relative; top:25px; left:10px; color:black;">Quantidade de interações?</label>
                         </div>
                         <div class="input-field col l8">
-                            <input id="interacao" type="number" class="validate black-text" name="interacoes" value="" style="position:relative; right:20px">
+                            <input id="interacao" type="number" class="validate black-text" name="interacoes" style="position:relative; right:20px" min="1">
                         </div>
                     </div>
                     <div class="row">
@@ -43,3 +43,9 @@
         </div>
     </form>
 </main>
+<script>
+    chcear(e){
+        if e == '-'
+        
+    }
+</script>
