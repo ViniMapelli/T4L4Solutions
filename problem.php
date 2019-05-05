@@ -15,7 +15,10 @@
     $restricao = array();
     for ($i = 1; $i <= $nRestricoes; $i++) array_push($restricao, $_POST['RestricaoVariavel'.$i]);
 
-    $opcaoRestricao = $_POST['opcaoRestricao'];
+    // $opcaoRestricao = $_POST['opcaoRestricao'];
+    
+    $opcaoRestricao = array(1,1);
+    // print_r ($opcaoRestricao);
 
     $simplex = new Simplex($nDecisoes, $nRestricoes, $funcao, $restricao, $opcaoRestricao, $base, $interacoes);
 

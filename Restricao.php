@@ -43,10 +43,10 @@ class Restricao extends Decisao
             echo '<div id="listaRestricoes" class="row col s12">';
                 $this->getFuncaoRestricao($i);
                 echo '<div class="input-field col s1">';
-                    /*echo '<label name="opcaoRestricao[]" id="opcaoRestricao" value="1"> <= </label>';*/
-                    echo '<select name="opcaoRestricao[]" id="opcaoRestricao" >';
-                        echo '<option value="1" selected><=</option>';
-                    echo '</select>';
+                    echo '<label name="opcaoRestricao[]" id="opcaoRestricao" value="1"> <= </label>';
+                    // echo '<select name="opcaoRestricao[]" id="opcaoRestricao" >';
+                    //     echo '<option value="1" selected><=</option>';
+                    // echo '</select>';
                 echo '</div>';
                 echo '<div class="input-field col s1">';
                     echo ' <input id="base'.$i.'" type="number" class="validate black-text" name="base[]" value="0" min="0">';
