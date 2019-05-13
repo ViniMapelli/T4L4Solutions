@@ -74,6 +74,7 @@ class Simplex
         for($i = 1; $i <= $restricoes + 1;$i++) $this->tabela[1 + $restricoes][$i + $decisoes] = 0;
 
         array_push($this->lista_tabela, $this->tabela);
+        //print_r($this->tabela);
     }
 
     function __clone()
@@ -170,6 +171,7 @@ class Simplex
         }
 
         array_push($this->lista_tabela, $this->tabela);
+        //print_r($this->tabela);
     }
 
     private function zerarLinha()
@@ -202,10 +204,16 @@ class Simplex
 
     public function melhorSolucao()
     {
+        
         $i;
         for ($i = 1; $i <= $this->qtdeRestricao ;$i++){
             array_push($this->solucao,[ $this->tabela[$i][0] , $this->tabela[$i][$this->qtdeColunasTabela]]);
         }
+        //for($j=0;j<$this->qtdeRestricao)
+        //print_r($this->tabela);
+        //$this->tabela[$this->qtdeRestricao][$this->qtdeColunasTabela] = $this->tabela[$this->qtdeRestricao][$this->qtdeColunasTabela] * -1;
+        //echo $this->tabela[$this->qtdeRestricao][$this->qtdeColunasTabela];
+        //print_r($this->solucao);
         if($this->tipo_funcao == 2)
             $this->solucao[$i-2][1] = $this->solucao[$i-2][1] * -1 ;
 
