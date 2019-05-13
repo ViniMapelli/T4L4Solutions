@@ -12,6 +12,7 @@ class Simplex
     public $opcaoRestricoes;
     public $solucao = array();
     public $base = array();
+    private $tipo_funcao;
 
     function __construct($decisoes, $restricoes, $função, $restricao, $opcaoRestricao, $base, $interacoes)
     {
@@ -82,6 +83,7 @@ class Simplex
 
     public function maximizar()
     {
+        $this->tipo_funcao = 1;
         for($i = 1; $i <= $this->nInteracoes; $i++)
         {
             if ($this->validarFuncao() !=  True)
@@ -93,6 +95,7 @@ class Simplex
 
     public function minimizar()
     {
+        $this->tipo_funcao = 2;
         for($i = 1; $i <= $this->nInteracoes; $i++)
         {
             if ($this->validarFuncao() !=  True)
@@ -109,18 +112,19 @@ class Simplex
         {
             if ( $this->tabela[$this->nRestricoes + 1][$i] < 0 )
             {
+         
                 $validar = False;
                 break;
+         
             }
         }
-
         return $validar;
     }
 
     public function quemSaiDaBse()
     {
         $menorCoficiente = $this->procurarMenorCoficienteFuncao();
-        $posicao = 0;
+        $posicao = -1;
         $valor = 999999999;
 
         for($i = 1; $i <= $this->nRestricoes;$i++)
@@ -130,14 +134,16 @@ class Simplex
 
             if( !$x == 0 )
             {
-                if ( ($y / $x) < $valor )
+                if ( ($y / $x) < $valor && ($y / $x) > 0 )
                 {
                     $valor = ($y / $x);
                     $posicao = $i;
                 }
             }
         }
-
+        if($posicao == -1){
+            return False;
+        }
         $this->tabela[$posicao][0] = $this->tabela[0][$menorCoficiente];
 
         //Posicao e valor do Pivo.
@@ -169,6 +175,8 @@ class Simplex
     private function zerarLinha()
     {
         $regras = $this->quemSaiDaBse();
+        if(!$regras)
+            header("location:noSolution.php");
 
         for($i = 1; $i <= $this->qtdeColunasTabela;$i++)
             $this->tabela[$regras[0]][$i] = $this->tabela[$regras[0]][$i] / $regras[2];
@@ -194,8 +202,12 @@ class Simplex
 
     public function melhorSolucao()
     {
-        for ($i = 1; $i <= $this->qtdeRestricao ;$i++)
+        $i;
+        for ($i = 1; $i <= $this->qtdeRestricao ;$i++){
             array_push($this->solucao,[ $this->tabela[$i][0] , $this->tabela[$i][$this->qtdeColunasTabela]]);
+        }
+        if($this->tipo_funcao == 2)
+            $this->solucao[$i-2][1] = $this->solucao[$i-2][1] * -1 ;
 
         return $this->solucao;
     }
@@ -251,11 +263,14 @@ class Simplex
             }
 
             sort($conjunto);
+            //print_r($conjunto);
+            //echo $this->base[$w - 1];
             $conjunto[0] = $conjunto[0] + $this->base[$w - 1];
             $conjunto[(count($conjunto) -1)] = $conjunto[(count($conjunto) -1)] + $this->base[$w - 1];
 
             array_push($resultado, [$this->tabela[0][$j], $conjunto[0], $conjunto[(count($conjunto) -1)]]);
         }
+        //print_r($resultado);
         return $resultado;
     }
 }

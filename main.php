@@ -27,7 +27,7 @@
                             <label style="font-size:16px; position:relative; top:25px; left:10px; color:black;">Quantidade de interações?</label>
                         </div>
                         <div class="input-field col l8">
-                            <input id="interacao" type="number" class="validate black-text" name="interacoes" style="position:relative; right:20px" min="1">
+                            <input id="interacao" type="number" class="validate black-text" name="interacoes" style="position:relative; right:20px" min="1" value="1000">
                         </div>
                     </div>
                     <div class="row">
@@ -43,9 +43,3 @@
         </div>
     </form>
 </main>
-<script>
-    chcear(e){
-        if e == '-'
-        
-    }
-</script>
