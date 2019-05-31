@@ -1,5 +1,5 @@
 <?php 
     include "header.php";
-    include "main.php";
+    include "mainM.php";
     include "footer.php";
 ?>
