@@ -13,10 +13,10 @@
                     <div class="input-field col l2 m2 s1">
                     </div>
 				    <div class="input-field col l4 m2 s1">
-					    <a href="indexM.php" class="btn waves-effect waves-light col l12 m6 s3" style="background-color:orange;">Mochila</a>
+					    <a href="indexM.php" class="btn waves-effect waves-light col l12 m6 s3" style="background-color:orange; border-radius:20px">Mochila</a>
                     </div>
                     <div class="input-field col l4 m2 s1">
-					    <a href="indexS.php" class="btn waves-effect waves-light col l12 m6 s3" style="background-color:orange;">Simplex</a>
+					    <a href="indexS.php" class="btn waves-effect waves-light col l12 m6 s3" style="background-color:orange; border-radius:20px">Simplex</a>
                     </div>
                 </div>
             </div>

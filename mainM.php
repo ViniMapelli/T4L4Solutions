@@ -30,7 +30,7 @@
 				<div class="input-field col l1 m2 s1">
                 </div>
 				<div class="input-field col l3 m2 s1">
-					<input type="button" value="Adicionar Item" onclick="addItem();" class="btn waves-effect waves-light col l12 m6 s3" style="background-color:orange;">
+					<input type="button" value="Adicionar Item" onclick="addItem();" class="btn waves-effect waves-light col l12 m6 s3" style="background-color:orange; border-radius:20px">
 				</div>
             </div>
 			<div class="row">
@@ -50,7 +50,7 @@
 				<div class="input-field col l4 m2 s1">
                 </div>
 				<div class="input-field col l4 m2 s1">
-					<input type="button" value="Gerar Resultado" onclick="teste();" class="btn waves-effect waves-light col l12 m6 s3" style="background-color:green;">
+					<input type="button" value="Gerar Resultado" onclick="teste();" class="btn waves-effect waves-light col l12 m6 s3" style="background-color:green; border-radius:20px">
                 </div>
 			</div>
 				<div class="row">
