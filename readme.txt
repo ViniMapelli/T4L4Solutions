@@ -1,60 +1,61 @@
-#Nome da Aplicação
+Nome da Aplicação:
 T4L4 Solutions
 
 Repositório para a implementação do algoritmo Simplex e Mochila.
+GitHub: https://github.com/ViniMapelli/T4L4Solutions
+Heroku: https://t4l4solutions.herokuapp.com/index.php
 
 Projeto de Pesquisa Operacional
 5º Semestre BCC UNIVEM
 
-#Alunos
+Alunos
 Vinicius Mapelli    RA: 570370
-Leonardo Osawa      RA: 
-Luiz Henrique Simba RA:
+Leonardo Osawa      RA: 569313
+Luiz Henrique Simba RA: 568546
 
-O Simplex permite que se encontre valores ideais em situações em que diversos aspectos precisam ser respeitados. Diante de um problema, são estabelecidas inequações que representam restrições para as variáveis. A partir daí, testa-se possibilidades de maneira a otimizar, isto é, maximizar ou minimizar o resultado da forma mais rápida possível.
+O Simplex é um meio onde você encontra a melhor combinação de valores em determinadas situações, levando em conta algumas restrições que devem ser respeitadas, onde diante de um problema com determinadas variáveis, as inequações como restrições, a melhor maneira de otimização é o objetivo sendo maximização ou minimização.
 
-O algoritmo da mochila consiste em preencher a mochila com objetos diferentes de pesos e valores. O objetivo é que preencha a mochila com o maior valor possível, não ultrapassando o peso máximo.
+O algoritmo da mochila tem o objetivo em achar uma combinação de objetos onde, seu valor seja o maior possível, respeitando a capacidade da mochila.
 
-
-## Ferramentas
+Ferramentas
 - PHP
 - Javascript
 - Heroku
-- GitHub para hospedagem e versionamento
+- GitHub
 
-## Nota de realease a ser publicado
+Nota de realease a ser publicado
 
-###Simplex
+Simplex
 - Algoritmo Simplex para problemas de maximização.
 - Algoritmo Simplex para problemas de minimização.
 - É exibido o passo a passo das tabelas geradas pelo método Simplex
-- Tabela de Sensibilidade.
+- Analise de Sensibilidade.
 
-###Mochila
+Mochila
 - Apreentação da solução, dos itens a serem considerados e a tabela de cálculo.
 
-##Entradas personalizadas para:
+Entradas personalizadas para:
 
-###Simplex
+Simplex
 - Limite máximo de iterações
 - Tipo de Simplex (MAX ou MIN)
 - Quantidade de variáveis e restrições
 
-###Mochila
+Mochila
 - Capacidade da mochila
 - Peso e valor dos itens
 
-##Limitações
+Limitações
 
-###Simplex
+Simplex
 - Em cada variável da função objetivo e das restrições deve conter apenas o número, sem a adição do 'x', separando os números por ';' e caso tenha alguma variável nula, é necessário inserir o 0.
 
-###Mochila
+Mochila
 - Serão permitidos somente valores inteiros
 
-##Datas Importantes
+Datas Importantes
 
-###Simplex
+Simplex
 
   Datas     |   Eventos
 ---------   |   ---------
@@ -71,7 +72,7 @@ O algoritmo da mochila consiste em preencher a mochila com objetos diferentes de
 13/05/2019  |   MVP
 
 
-###Mochila
+Mochila
 
   Datas     |   Eventos
 ---------   |   -----------
@@ -81,13 +82,13 @@ O algoritmo da mochila consiste em preencher a mochila com objetos diferentes de
 20/05/2019  |   Criação de uma página de navegação
 01/06/2019  |   Atualizando o Read Me
 
-##Compatibilidade
+Compatibilidade
        Requisitos   |    Ferramentas
 ----------------    |    -------------------
       Navegadores   |   Mozila Firefox e Chrome
 Sistema Operacional |   Ubuntu, Windows e Mac
 
-##Tecnologias
+Tecnologias
 
   Tecnologias    |  Ferramentas
  -------------   |  -------------
@@ -96,21 +97,16 @@ Back-End         |  Javascript e PHP
 Editor de Texto  |  Sublime e Visual Studio Code
 Servidor Web     |  Heroku 
 
-##Atividades Realizadas no Período
+Atividades Realizadas no Período
 
-###Simplex
-Código | Título | Tarefa | Situação | Observação
---------- | ------ | -------| -------| -------
-1 | Maximizar | Montar a Tabela Simplex, e possibilitar o usuário a maximizar modelos de simplex com sistemas lineares. | Concluído | Apenas restrições de “<=”
-2 | Minimizar | Montar a Tabela Simplex, e possibilitar o usuário a minimizar modelos de simplex com sistemas lineares. | Concluído | Apenas restrições de “<=”
-3 | Adição de restrições | Possibilitar o usuário a adicionar inputs para maiores números de restrições. | Concluído |
-4 | Remoção de restrições | Possibilitar o usuário a remover inputs para menores números de restrições. | Concluído |
-5 | Demonstrar passo a passo | Demonstrar ao usuário as alterações na tabela causada pelas iterações do método simplex. | Concluído|
-6 | Tabela de sensibilidade | Demonstrar ao usuário a tabela de sensibilidade. |Concluído|
+Simplex
 
-###Mochila
+Restrições dinâmicas - Ao informar a quantidade de restrições os a aplicação gera a quantidade de entradas correspondente
+Maximizar - Montar Simplex e realizar os calculos de maximização.
+Minimizar - Montar Simplex e realizar os calculos de minimização.
+Demonstrar Passo a Passo - Ao habilitar a função "Mostrar passo a passo" a aplicação gera todos as iterações que foram feitas para chegar na solução.
+Analise de sensibilidade - Ao final dos calculos a aplicação mostra a análise de sensibilidade realizada conforme o problema fornecido.
 
-Código | Título | Tarefa | Situação | Observação
---------- | ------ | -------| -------| -------
-1 | Tabela de solução | Demonstrar ao usuário as etapas do algortimo | Concluído |
-2 | Solução do problema | Mostrar ao usuário os itens selecionados pelo algoritmo como qualificados | Concluído |
+Mochila
+
+Solução do problema - Mostrar para o usuário a melhor solução, apresentando os itens que devem ser considerados.
