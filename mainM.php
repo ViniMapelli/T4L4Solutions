@@ -13,19 +13,19 @@
                     <label style="font-size:16px; position:relative; top:25px; left:10px; color:black;">Capacidade da Mochila</label>
                 </div>
                 <div class="input-field col l9">
-                    <input id="capacidade" type="number" class="validate black-text" style="position:relative; right:20px" min="1" onchange="addCapacidade();">
+                    <input id="capacidade" type="number" class="validate black-text" style="position:relative;" min="1" onchange="addCapacidade();">
                 </div>
                 <div class="col l1">
                     <label style="font-size:16px; position:relative; top:25px; left:10px; color:black;">Valor</label>
                 </div>
                 <div class="input-field col l3">
-                    <input id="valor" type="number" class="validate black-text" style="position:relative; right:20px" min="1">
+                    <input id="valor" type="number" class="validate black-text" style="position:relative;" min="1">
                 </div>
                 <div class="col l1">
                     <label style="font-size:16px; position:relative; top:25px; left:10px; color:black;">Peso</label>
                 </div>
                 <div class="input-field col l3">
-                    <input id="peso" type="number" class="validate black-text" style="position:relative; right:20px" min="1">
+                    <input id="peso" type="number" class="validate black-text" style="position:relative;" min="1">
 				</div>
 				<div class="input-field col l1 m2 s1">
                 </div>
