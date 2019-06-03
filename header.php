@@ -13,7 +13,7 @@
     <script type="text/javascript" src="knapsack.js"></script>
 </head>
 <body>
-    <header>
+    <!-- <header>
         <div class=" navbar-fixed">
             <nav class="black">
                 <div class="nav-wrapper">
@@ -21,4 +21,14 @@
                 </div>
             </nav>
         </div>
-    </header>
+    </header> -->
+    <nav>
+        <div class="nav-wrapper black">
+            <a href="index.php" class="brand-logo" style="color:orange; margin-left:1%">T4L4Solutions</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down" style="margin-right:1%">
+                <li><a href="index.php" style="color:orange;">Inicio</a></li>
+                <li><a href="indexM.php" style="color:orange;">Mochila</a></li>
+                <li><a href="indexS.php" style="color:orange;">Simplex</a></li>
+            </ul>
+        </div>
+    </nav>
