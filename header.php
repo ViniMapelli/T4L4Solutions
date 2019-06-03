@@ -11,6 +11,7 @@
 
     <script type="text/javascript" src="js/application.js"></script>
     <script type="text/javascript" src="knapsack.js"></script>
+    <link rel="shortcut icon" href="img/icon.ico" >
 </head>
 <body>
     <!-- <header>
