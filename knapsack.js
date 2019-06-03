@@ -2,31 +2,24 @@ var gcapacidade;
 var gvalor = [];
 var gpeso = [];
 var gtotal;
+var mochila = [];
 
 function addItem(){
-    var ctrP = document.getElementById("valor").value;
-    var ctrV = document.getElementById("peso").value;
 
-    if(ctrP== "" || ctrV == ""){
-        alert("Valor ou Peso sem valor, por favor foneça um número válido");
-    }else{
-        gvalor.push(document.getElementById("valor").value);
-        gpeso.push(document.getElementById("peso").value);
+    gvalor.push(document.getElementById("valor").value);
+    gpeso.push(document.getElementById("peso").value);
 
-        var new_tr = document.createElement("tr");
-        var td_valor = document.createElement("td");
-        var td_peso = document.createElement("td");
+    var new_tr = document.createElement("tr");
+    var td_valor = document.createElement("td");
+    var td_peso = document.createElement("td");
 
-        td_valor.innerText = document.getElementById("valor").value;
-        td_peso.innerText = document.getElementById("peso").value;
+    td_valor.innerText = document.getElementById("valor").value;
+    td_peso.innerText = document.getElementById("peso").value;
 
-        new_tr.appendChild(td_valor);
-        new_tr.appendChild(td_peso);
+    new_tr.appendChild(td_valor);
+    new_tr.appendChild(td_peso);
 
-        document.getElementById("table").appendChild(new_tr);
-        document.getElementById("valor").setAttribute("value","");
-        document.getElementById("peso").setAttribute("value","");
-    }
+    document.getElementById("table").appendChild(new_tr);
 }
 
 function addCapacidade(){
@@ -34,22 +27,17 @@ function addCapacidade(){
 }
 
 function teste(){
-    console.log(gpeso.length);
-    if(gpeso.length == 0){
-        alert("Sem valores, por favor foneça um número válido");
-    }else{
-        gtotal = gpeso.length;
-        knapsack(gcapacidade, gpeso, gvalor, gtotal);
-    }
-    //teste:
+    gtotal = gpeso.length;
+    knapsack(gcapacidade, gpeso, gvalor, gtotal);
     //knapsack(18,[4,6,5,7,3,1,6],[12,10,8,11,14,7,9],7);
 }
 
 function knapsack(capacidade, peso, val, linhas){
 
-    peso= peso.map(function(peso){return Number(peso);});
-    val= val.map(function(val){return Number(val);});
+    peso = peso.map(function(peso){return Number(peso);});
+    val = val.map(function(val){return Number(val);});
 
+    mochila = [];
     matriz = [];
 
     for(var i = 0; i <= capacidade; i++){
@@ -71,9 +59,39 @@ function knapsack(capacidade, peso, val, linhas){
         }
     }
 
+    res = matriz[linhas][capacidade];
+
+    w = capacidade;
+
+    for(var i = linhas; i > 0; i--){
+        if(res <= 0){
+            break;
+        }
+        
+        if(res == matriz[i - 1][w]){
+            continue;
+        }else{
+            mochila.push(i - 1);
+
+            res = res - val[i - 1];
+            w = w - peso[i - 1];
+        }
+    }
+
     var resultado = document.createElement("table");
-    var new_h1 = document.createElement("h4");
-    new_h1.innerText = "Solução:" + matriz[linhas][capacidade];
+
+    var new_h1 = document.createElement("span");
+    new_h1.innerText = "Solucao: " + matriz[linhas][capacidade];
+
+    var new_h1_1 = document.createElement("span");
+
+    str_solucao = "Itens levados {Valor, Peso}: ";
+
+    for(var i = 0; i < mochila.length; i++){
+        str_solucao += "{" + val[mochila[i]] + "," + peso[mochila[i]] + "} ";
+    }
+
+    new_h1_1.innerText = str_solucao;
 
     for(var i = 0; i <= linhas; i++){
         for(var j = 0; j <= capacidade; j++){
@@ -94,6 +112,7 @@ function knapsack(capacidade, peso, val, linhas){
     }
 
     document.getElementById("resultado").appendChild(resultado);
-    document.getElementById("resultado").setAttribute("style","display:block; overflow-x:scroll;");
-    document.getElementById("solucao").appendChild(new_h1);
+    document.getElementById("resultado").setAttribute("style","display:block; overflow-x:scroll");
+    document.getElementById("solutionF").appendChild(new_h1);
+    document.getElementById("solutionI").appendChild(new_h1_1);
 }
