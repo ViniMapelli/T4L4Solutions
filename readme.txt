@@ -38,7 +38,7 @@ Entradas personalizadas para:
 
 Simplex
 - Limite máximo de iterações
-- Tipo de Simplex (MAX ou MIN)
+- Tipo de Simplex (Maximização ou Minimização)
 - Quantidade de variáveis e restrições
 
 Mochila
