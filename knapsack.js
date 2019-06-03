@@ -44,7 +44,9 @@ function teste(){
         document.getElementById("capacidade").setAttribute("disabled","");
         document.getElementById("valor").setAttribute("disabled","");
         document.getElementById("peso").setAttribute("disabled","");
-        document.getElementById("divVoltar").setAttribute("style","display:block")
+        document.getElementById("divVoltar").setAttribute("style","display:block");
+        document.getElementById("btAdd").setAttribute("onclick","");
+        document.getElementById("btGerar").setAttribute("onclick","");
     }
 
 }
