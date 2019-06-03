@@ -6,20 +6,28 @@ var mochila = [];
 
 function addItem(){
 
-    gvalor.push(document.getElementById("valor").value);
-    gpeso.push(document.getElementById("peso").value);
+    var valor = document.getElementById("valor").value;
+    var peso = document.getElementById("peso").value;
 
-    var new_tr = document.createElement("tr");
-    var td_valor = document.createElement("td");
-    var td_peso = document.createElement("td");
+    if(valor == 0 || peso == 0){
+        alert("Peso e Valor invalido!");
+    }else{
 
-    td_valor.innerText = document.getElementById("valor").value;
-    td_peso.innerText = document.getElementById("peso").value;
+        gvalor.push(document.getElementById("valor").value);
+        gpeso.push(document.getElementById("peso").value);
 
-    new_tr.appendChild(td_valor);
-    new_tr.appendChild(td_peso);
+        var new_tr = document.createElement("tr");
+        var td_valor = document.createElement("td");
+        var td_peso = document.createElement("td");
 
-    document.getElementById("table").appendChild(new_tr);
+        td_valor.innerText = document.getElementById("valor").value;
+        td_peso.innerText = document.getElementById("peso").value;
+
+        new_tr.appendChild(td_valor);
+        new_tr.appendChild(td_peso);
+
+        document.getElementById("table").appendChild(new_tr);
+    }
 }
 
 function addCapacidade(){
@@ -28,8 +36,17 @@ function addCapacidade(){
 
 function teste(){
     gtotal = gpeso.length;
-    knapsack(gcapacidade, gpeso, gvalor, gtotal);
-    //knapsack(18,[4,6,5,7,3,1,6],[12,10,8,11,14,7,9],7);
+    if(gtotal == 0){
+        alert("Capacidade invalida!");
+    }else{
+        knapsack(gcapacidade, gpeso, gvalor, gtotal);
+        //knapsack(18,[4,6,5,7,3,1,6],[12,10,8,11,14,7,9],7);
+        document.getElementById("capacidade").setAttribute("disabled","");
+        document.getElementById("valor").setAttribute("disabled","");
+        document.getElementById("peso").setAttribute("disabled","");
+        document.getElementById("divVoltar").setAttribute("style","display:block")
+    }
+
 }
 
 function knapsack(capacidade, peso, val, linhas){

@@ -70,6 +70,12 @@
 						</div>
 					</div>
 				</div>
+				<div class="row" id="divVoltar" style="display:none;">
+					<div class="col l4"></div>
+					<div class="input-field col l4 m2 s1">
+						<a class="btn waves-effect waves-light col l12 m6 s3" style="background-color:orange; border-radius:20px;" href="indexM.php">Tentar Novamente</a>
+                	</div>
+				</div>
 				<!-- <div id="solucao"></div> -->
 			<!-- </div> -->
 		</div>
